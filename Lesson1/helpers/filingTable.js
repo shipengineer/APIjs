@@ -1,3 +1,4 @@
+//рендеринг таблицы
 export function fillTable(trainingTable, table) {
   trainingTable.forEach((training) => {
     const freeSpace = training.maxParticipants - training.currentParticipants;

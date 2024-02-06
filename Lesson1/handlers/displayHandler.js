@@ -1,3 +1,5 @@
+//данная функция устанавливает наблюдателя за изменениями в количестве свободных
+//мест и отключает кнопки
 let observer = new MutationObserver((allEvents) => {
   allEvents.forEach((e) => {
     if (

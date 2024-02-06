@@ -1,9 +1,7 @@
-// Если максимальное количество участников достигнуто,
-// либо пользователь уже записан на занятие,
+//бработчик записи на секцию
 
-//  сделайте кнопку "записаться" неактивной.
 function subscribeHandler(e, userToken) {
-  e.target.setAttribute("disable", "disable");
+  // e.target.setAttribute("disable", "disable");
   const trainingRowID = e.target.closest(".trainingRow").id;
   const trainings = JSON.parse(localStorage.getItem("base"));
   const userSubscribes = localStorage.getItem(userToken);
