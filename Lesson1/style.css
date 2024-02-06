@@ -1,1 +1,45 @@
-/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Protest Riot", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap");
+}
+@font-face {
+  font-family: "Comfortaa", sans-serif;
+  src: url(https://fonts.googleapis.com/css2?family=Comfortaa&display=swap);
+}
+.table {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px;
+}
+.table .tableHeaders {
+  font-family: "Protest Riot", sans-serif;
+}
+.table .tableHeaders th {
+  padding: 5px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  text-wrap: wrap;
+}
+.table tbody {
+  font-family: "Comfortaa", sans-serif;
+}
+.table tbody:nth-child(1n) {
+  background-color: aqua;
+}
+.table tbody:nth-child(2n) {
+  border: 2px solid green;
+  background-color: antiquewhite;
+}
+.table td {
+  text-align: center;
+}
+.table .trainingName {
+  width: 20%;
+}
+.table .subscribeButton {
+  background-color: lightgreen;
+}
+.table .unsubscribeButton {
+  background-color: lightpink;
+}/*# sourceMappingURL=style.css.map */
