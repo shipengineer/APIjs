@@ -1,7 +1,6 @@
 async function fetchTry(images, i) {
   await fetch("https://jsonplaceholder.typicode.com/photos/" + i)
     .then((data) => {
-      console.log(data);
       if (!data.ok) {
         //если на сервере возникла ошибка берется новая функция
         //со следующей картинкой
@@ -17,7 +16,6 @@ async function fetchTry(images, i) {
     .then((data) => {
       images.push(data);
       i++;
-      console.log(images);
     });
 }
 

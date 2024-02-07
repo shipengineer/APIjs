@@ -1,1 +1,14 @@
-/*# sourceMappingURL=style.css.map */
+.wrapBlank {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.imgContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  transition-duration: 2s;
+}/*# sourceMappingURL=style.css.map */
