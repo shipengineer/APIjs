@@ -1,21 +1,29 @@
 //логика
+
+import fetchImg from "./fetchHelper/fetchImg.js";
+
+//0. объявляем счетчик парса фотографий
+let photoCount = 1;
 //1. получить первый раз три картинки и вставить их в слайдер
-async function fetchImg(amountOfImage) {
-  const images = [];
-  let i = 1;
-  function fetchTry() {}
-  do {
-    const response = await fetch(
-      "https://jsonplaceholder.typicode.com/photos/" + i
-    )
-      .then((data) => data.json())
-      .then((data) => {
-        images.push(data);
-      });
-  } while (images.length === amountOfImage);
-  return images;
+const firstRenderImage = await fetchImg(3, photoCount);
+
+function addToSliderHelper(images) {
+  const imageContainer = document.querySelector(".imgContainer");
+  const navPoints = document.querySelector(".navPoints");
+  images.forEach((img, index) => {
+    const newSlide = document.createElement("img");
+    newSlide.setAttribute("src", `${img.thumbnailUrl}`);
+    imageContainer.append(newSlide);
+
+    const newNavPointInput = document.createElement("input");
+    newNavPointInput.type = "radio";
+    newNavPointInput.classList.add("navPointInput");
+    newNavPointInput.value = index;
+
+    navPoints.appendChild(newNavPointInput);
+  });
 }
-fetchImg(2);
+addToSliderHelper(firstRenderImage);
 //1.1 если картинку получить не удалось
 //1.1.1 взять с сервера информацию о еще одной картинке
 //1.1.2 попытаться загрузить и добавить в слайдер
