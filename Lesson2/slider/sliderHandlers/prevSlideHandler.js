@@ -1,5 +1,3 @@
-import changeSlideHandler from "./changeSlideHandler.js";
-
 export default function prevSlideHandler() {
   const navPoints = document.querySelector(".navPoints");
   const checkedPoint = [...navPoints.childNodes].find(
