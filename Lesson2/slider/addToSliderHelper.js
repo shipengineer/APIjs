@@ -1,9 +1,13 @@
 export default function addToSliderHelper(images) {
   const imageContainer = document.querySelector(".imgContainer");
   const navPoints = document.querySelector(".navPoints");
-  images.forEach((img) => {
+  images.forEach((img, index) => {
     const newSlide = document.createElement("img");
-    newSlide.setAttribute("src", `${img.thumbnailUrl}`);
+    if (index % 2) {
+      newSlide.setAttribute("src", `${img.thumbnailUrl}`);
+    } else {
+      newSlide.setAttribute("src", `${img.url}`);
+    }
 
     imageContainer.append(newSlide);
 

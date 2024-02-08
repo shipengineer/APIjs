@@ -1,13 +1,46 @@
-.wrapBlank {
+.sliderContainer {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-}
-.imgContainer {
-  display: flex;
-  flex-wrap: nowrap;
-  transition-duration: 2s;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  gap: 20px;
+  padding: 20px;
+  .wrapBlank {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  .imgContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    transition-duration: 2s;
+  }
+  .sliderNavigation {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    width: 25px;
+    height: 100px;
+    color: white;
+    font-size: large;
+    background-color: rgba(211, 211, 211, 0.2);
+    mix-blend-mode: difference;
+    border: none;
+  }
+  .prevButton {
+    top: 120px;
+    left: 20px;
+  }
+  .nextButton {
+    top: 120px;
+    right: 20px;
+  }
 }

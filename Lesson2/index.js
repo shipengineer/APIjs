@@ -9,9 +9,8 @@ let photoCount = 1;
 const firstRenderImage = await fetchImg(3, photoCount);
 addToSliderHelper(firstRenderImage);
 //2.запускаем функцию автоскрола каждые 2 секунды
-
+setInterval(nextSlideHandler, 5000);
 //3.если пользователь кликает по кнопкам сам:
-
 //3.1 кнопками следующее и предыдущее
 //разделяю на две функции для читабельности
 const prevButton = document.querySelector(".prevButton");
