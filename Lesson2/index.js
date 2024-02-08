@@ -19,7 +19,7 @@ const autoScroll = setInterval(nextSlideHandler, 5000);
 const prevButton = document.querySelector(".prevButton");
 const nextButton = document.querySelector(".nextButton");
 prevButton.addEventListener("click", prevSlideHandler);
-nextButton.addEventListener("click", prevSlideHandler);
+nextButton.addEventListener("click", nextSlideHandler);
 
 //3.2 навигационными точками
 const navPointsContainer = document.querySelector(".navPoints");
