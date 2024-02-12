@@ -23,6 +23,7 @@ export default async function fetchImg(amountOfImage, i) {
   const images = [];
   do {
     await fetchTry(images, i);
+    console.log(i);
     i++;
   } while (images.length < amountOfImage);
   return images;
