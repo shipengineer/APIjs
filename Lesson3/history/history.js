@@ -3,7 +3,7 @@ export default function getHistory() {
     ? localStorage.getItem('history')
     : '';
   let order = [];
-  console.log(string);
+
   if (string.length === 0) {
     return order;
   }
